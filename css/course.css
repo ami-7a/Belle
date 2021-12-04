@@ -1,0 +1,111 @@
+/* 全体 文字を中心揃え */
+#main{
+  text-align: center;
+}
+
+/* トップのロゴ */
+.logo img{
+  height: 30vh;
+  width: auto;
+  object-fit: contain;
+  margin-left: 2vw;
+}
+
+/* 性別選択ボタン */
+.gender-select-btn{
+  display: flex; /* 横並び */
+  justify-content: space-between;
+  width: 60vw; /* 全体幅60vw指定 */
+  margin: 5vh auto; /* 中央寄せ */
+}
+
+/* 性別選択ボタン li */
+.gender-select-btn li{
+  width: 50%;
+  margin-left: 3vw;
+}
+
+/* ボタンの設定 */
+.gender-select-btn a{
+  position: relative;
+  align-items: center; /* 文字と矢印を一列に */
+  padding: 5%;
+  width: 20vw; /* ボタン幅 */
+  font-size: 1rem; /* ボタンフォントサイズ */
+  color: #fff; /* 文字色 */
+  background-color: #666666af; /* Menの背景色 */
+  box-shadow: 0 0 10px #8181816e;
+  border-radius: 50vh;
+  transition: .5s; /* hover時の遅れ */
+}
+
+/* Ladyの背景色 */
+.gender-select-btn .lady a{
+  background-color: #f3d147cc;
+}
+
+
+/* ボタン右の矢印 */
+.gender-select-btn a::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: calc(2em + 5px);
+  transform: translateY(-50%) rotate(45deg);
+  width: 6px; /* 上の線の長さ*/
+  height: 6px;  /* 下の線の長さ */
+  border-top: 1px solid #fff; /*上の線調整 */
+  border-right: 1px solid #fff; /*下の線調整 */
+  transition: .3s; /* hover時の遅れ */
+}
+
+/* Men ホーバー時の背景色 */
+.gender-select-btn a:hover{
+  background-color: #929292b6;
+}
+
+/* Lady ホーバー時の背景色 */
+.gender-select-btn .lady a:hover{
+  background-color: #f3d14785;
+}
+
+/* ホーバー時 矢印が右に動く */
+.gender-select-btn a:hover::after {
+  right: calc(1.8em + 5px);
+}
+
+
+
+
+
+@media screen and (max-width:599px){
+
+  /* トップのロゴ */
+  .logo img{
+    height: 20vh;
+  }
+
+  /* 性別選択ボタン */
+  .gender-select-btn{
+    width: 100vw; /* 全体幅100vw指定 */
+    margin: 3vh auto; /* 中央寄せ */
+  }
+
+  /* 性別選択ボタン li */
+  .gender-select-btn li{
+    margin-left: 0vw;
+  }
+
+  /* ボタンの設定 */
+  .gender-select-btn a{
+    padding: 10% 3%; 
+    width: 42vw; /* ボタン幅 */
+    font-size: .9rem; /* ボタンフォントサイズ */
+  }
+
+  /* ボタン右の矢印 */
+  .gender-select-btn a::after {
+    display: none;
+  }
+
+}
