@@ -64,10 +64,10 @@
 }
 
 .gnav-img img{
-  width: 40vw;
-  height: 40vh;
+  width: 35vw;
+  height: 35vh;
   object-fit: contain;
-  margin: -5vh auto -10vh;
+  margin: -7vh auto -12vh;
 }
 
 #gnav.open{
