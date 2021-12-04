@@ -234,6 +234,12 @@
 
 @media screen and (max-width:599px){
 
+  /* logoの大きさ*/
+  #top-fadeUp_logo img {
+    width:50vw;
+  }
+
+
   /* mainimg */
   .mainimg img{ /* mainimgをトップ画面の高さに合わせる */
     width: 100vw;
@@ -246,7 +252,7 @@
   }
 
   .concept li{
-    width: 100%;
+    width: 95%;
   }
 
   /* コンセプト上 */
@@ -312,7 +318,7 @@
   /*トップへスクロールするボタン*/
   #page-top {
     margin: 10vh 0vw 5vh 85vw; /* ボタンの位置 */
-    padding: 0 7vw 0 35px; /* 文字の位置指定 */
+    padding: 0 7vw -5vh 35px; /* 文字の位置指定 */
   }
   
   /***トップへ戻るボタンここまで***/

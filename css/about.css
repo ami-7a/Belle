@@ -185,7 +185,7 @@
 
   /* 流動する丸１*/
   .fluid-1{
-    width: 30vh;/*横幅*/
+    width: 20vh;/*横幅*/
     height: 20vh;/*縦幅*/
     top: 25vh;
     right: 0%;
@@ -206,14 +206,13 @@
 
   /* 筆記体文字 */
   .hand-writting p{
-    margin-left: 30vw;
-    margin-top: 0vh;
-    font-size: 1rem;
+    display: none;
   }
 
   /* ご来店いただけるお客様すべてに"来てよかった",,,  */
   .top-title{
     width: 90%;
+    margin-bottom: 10vh;
   }
 
   /* ご来店いただけるお客様すべてに"来てよかった",,, 
@@ -254,6 +253,7 @@
     margin-top: 5vh;
   }
 
+
   .contents .txt p{
     text-align: center;
     margin-top: 0vh;
@@ -267,7 +267,7 @@
   /* お客様のご期待、ご要望に全力でお応えし、心身ともに美しくなるよう,,, */
   .add-txt{
     width: 90vw;
-    font-size: .8rem;
+    font-size: .85rem;
     margin: 10vh auto 20vh;
     line-height: 4vh;
   }
@@ -279,7 +279,7 @@
   .logo img{
     width: auto;
     height: 20vh;
-    margin-top: 0vh;
+    margin-top: -20vh;
   }
 
   /* 会社概要リスト */
