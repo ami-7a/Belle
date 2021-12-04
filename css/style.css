@@ -234,6 +234,11 @@
 
 @media screen and (max-width:599px){
 
+  /* 画像中央配置*/
+  #top-fadeUp_logo {
+    top: 40%;
+  }
+
   /* logoの大きさ*/
   #top-fadeUp_logo img {
     width:50vw;
