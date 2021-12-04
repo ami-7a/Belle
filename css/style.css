@@ -291,7 +291,7 @@
   }
 
   .course .course-flex{
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   .course .course-flex li{
