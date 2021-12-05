@@ -304,6 +304,10 @@ color:#f3981d;
 
   /* 共通CSS */
 
+  br{
+    display: none;
+  }
+
   /* header */
   #header{
     height: 9vh; /* top固定 グロナビの高さ */
