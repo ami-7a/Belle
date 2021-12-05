@@ -304,10 +304,6 @@ color:#f3981d;
 
   /* 共通CSS */
 
-  br{
-    display: none;
-  }
-
   /* header */
   #header{
     height: 9vh; /* top固定 グロナビの高さ */
@@ -323,6 +319,10 @@ color:#f3981d;
   /* main */
   #main{
     padding-top: 9vh;  /* headerの高さ（9vh）下に下げる */
+  }
+
+  #main br{
+    display: none;
   }
 
   /* main 各コンテンツ共通 */
