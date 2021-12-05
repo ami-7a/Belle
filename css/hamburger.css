@@ -1,5 +1,10 @@
 /* ハンバーガーメニューCSS */
 
+
+br{
+  display: block;
+}
+
 /*スマホ用ハンバーガーメニュー*/
 #hamburger {
   position: fixed;
