@@ -5,7 +5,7 @@
   margin: 0vh auto;
   display: flex;
   justify-content: space-between;
-  text-align: left;
+  text-align: center;
   color: #4d402f;
 }
 
@@ -24,6 +24,7 @@
 /* 右テキスト */
 .form .form-right{
   width: 50%;
+  text-align: left;
 }
 
 /* インプット3つ共通 */
