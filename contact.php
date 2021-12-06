@@ -346,7 +346,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
             <dd class="under-line">福岡市博多区博多駅東1丁目1-30 
               第一高田ビル501<a href="" target="_blank" rel="noopener">VIEW MAP</a></dd>
             <dt>TEL</dt>
-            <dd class="under-line"><a href="tel:×××-×××-××××" target="_blank" rel="noopener">×××-×××-××××</a></dd>
+            <dd class="under-line"><a href="tel:092-260-7106" target="_blank" rel="noopener">092-260-7106</a></dd>
             <dt>EMAIL</dt>
             <dd class="under-line"><a href="mailto:メアド入れる" target="_blank" rel="noopener">xxxxxx@GMAIL.COM</a></dd>
           </dl>
