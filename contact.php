@@ -255,7 +255,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
             <a href="https://line.me/ti/p/%ライン＠のアカウント" class="sns-btn" target="_blank" rel="noopener"><i class="fab fa-line"></i></a>
   
             <!-- メールフォーム -->
-            <a href="info@tiele-inc.com" class="sns-btn"><i class="far fa-envelope" target="_blank" rel="noopener"></i></a>
+            <a href="mailto:info@tiele-inc.com" class="sns-btn"><i class="far fa-envelope" target="_blank" rel="noopener"></i></a>
           </li>
         </ul>
       </nav>
@@ -361,7 +361,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
           <a href="https://line.me/ti/p/%ライン＠のアカウント" class="sns-btn" target="_blank" rel="noopener"><i class="fab fa-line"></i></a>
 
           <!-- メールフォーム -->
-          <a href="info@tiele-inc.com" class="sns-btn"><i class="far fa-envelope" target="_blank" rel="noopener"></i></a>
+          <a href="mailto:info@tiele-inc.com" class="sns-btn"><i class="far fa-envelope" target="_blank" rel="noopener"></i></a>
 
           <!-- お問い合わせボタン -->
           <div class="contact-btn btn effect-fade">
