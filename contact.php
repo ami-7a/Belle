@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
     
     // エラーなし（全ての項目が入力されている）
     if ($err_msg == '') {
-        $to = " "; // 管理者のメールアドレス(送信先)
+        $to = "info@tiele-inc.com"; // 管理者のメールアドレス(送信先)
         // Yudaiより下記を追加
         $from = "Amy <" . $email . ">";
 
@@ -89,8 +89,15 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
   <link rel="stylesheet" href="css/contact.css">
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 
-  <!-- google search console 確認 -->
-  <meta name="google-site-verification" content="8Hpk19m-giDVKuIWTDgfJihsgS_ZGgdopw32FDwOYAo" />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-215917376-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-215917376-1');
+  </script>
 
   <meta name="description" content="">
 
