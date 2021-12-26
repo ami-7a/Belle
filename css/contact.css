@@ -109,7 +109,7 @@ input:-webkit-autofill {
   .form .form-left img{
     height:  40vh;
     object-fit: cover;
-    margin: 0vh auto;
+    margin: 0vh 50vw 0vh 0vw;
   }
   
   /* 右テキスト */
