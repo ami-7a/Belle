@@ -89,6 +89,9 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
   <link rel="stylesheet" href="css/contact.css">
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 
+  <!-- google search console 確認 -->
+  <meta name="google-site-verification" content="8Hpk19m-giDVKuIWTDgfJihsgS_ZGgdopw32FDwOYAo" />
+
   <meta name="description" content="">
 
   <!-- google fonts -->
