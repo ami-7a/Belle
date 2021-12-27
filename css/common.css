@@ -269,28 +269,6 @@ h1{
 color:#f3981d;		
 }
 
-/* お問い合わせボタン */
-#footer .contact-btn{
-  margin: 4vh 0vw 0vh -3vw;
-  width: 5vw;
-}
-
-#footer .contact-btn a{
-  margin: 2vh 2vw 0vh 10vw;/* ボタンの位置指定 */
-  padding: 20% 20% 20% 50%;
-  width: 17vw; /* ボタン幅 */
-  border-radius: 50vh;
-}
-
-/* ボタン右の矢印 */
-#footer .contact-btn a::after {
-  display: none;
-}
-
-#footer .contact-btn a:hover {
-  background-color: #adadadd8;
-}
-
 #footer .copy-right{
   padding: 1%;
   text-align: center;
@@ -376,12 +354,7 @@ color:#f3981d;
   }
 
   #footer .contact .contact-flex .li-01{
-    width: 100%;
-    margin: 1vh auto;
-  }
-
-  #footer .contact .course-flex .li-02{
-    width: 40%;
+    display: none;
   }
 
   /* li-02 SNSボタン */
@@ -403,17 +376,6 @@ color:#f3981d;
     font-size: 3.5vh;
   }
 
-  /* お問い合わせボタン */
-  #footer .contact-btn{
-    margin: 2vh auto;
-    width: 60vw;
-  }
-
-  #footer .contact-btn a{
-    margin: 2vh auto;/* ボタンの位置指定 */
-    padding: 6% 2% 6% 12%;
-    width: 60vw; /* ボタン幅 */
-  }
 
   #footer .copy-right{
     height: 6vh;
