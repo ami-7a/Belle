@@ -61,12 +61,12 @@ li{
   display: flex;
   justify-content: space-between;
   line-height: 10vh;
-  width: 38vw;
+  width: 35vw;
   margin: 1vh auto;
-  padding-right: 5%;/* 右側余白 */
+  padding-right: 7%;/* 右側余白 */
 }
 
-/* nav５つのli */
+/* nav４つのli */
 #nav li a{
   padding: 0vh .5vw;
   position: relative; /* アンダーラインのためのrelative */
@@ -178,7 +178,7 @@ h1{
 /* Footer コンタクトセクション */
 #footer .contact{
   background-color: #c0c0c01a;
-  padding: 5% 10%;
+  padding: 4% 10%;
 }
 
 #footer .contact .contact-flex{
@@ -235,6 +235,7 @@ h1{
 
 /* li-02 SNSボタン */
 .li-02 a{
+  margin-top: 5vh;
   margin-left: 2vw;
 }
 
@@ -245,13 +246,13 @@ h1{
 
 .sns-btn{
   display: inline-block;	
-  font-size: 4vh;
+  font-size: 5vh;
   transition:.5s;
 }
 
 /* インスタ・ラインだけ少し大きく */
 .sns-btn .fa-instagram,.sns-btn .fa-line{
-  font-size: 4vh;
+  font-size: 5vh;
 }
 
 /* Instagram hover時 */
@@ -345,12 +346,9 @@ color:#f3981d;
 
 
   /* Footer コンタクトセクション */
-  #footer .contact{
-    padding: 5% 7%;
-  }
 
-  #footer .contact .contact-flex{
-    flex-direction: column;
+  #footer .contact{
+    padding: 1% 7%;
   }
 
   #footer .contact .contact-flex .li-01{
@@ -358,13 +356,16 @@ color:#f3981d;
   }
 
   /* li-02 SNSボタン */
+  .li-02{
+     padding-right: 2vw;
+  }
   .li-02 a{
     margin-left: 5vw;
   }
 
-  /* インスタグラムのアイコンを右に寄せる */
+  /* アイコンを中央に寄せる */
   .li-02 a:nth-child(1){
-    margin-left: 50vw;
+    margin-left: 27vw;
   }
 
   .sns-btn{

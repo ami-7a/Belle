@@ -283,8 +283,8 @@
 
   /*トップへスクロールするボタン*/
   #page-top {
-    margin: 10vh 0vw 5vh 85vw; /* ボタンの位置 */
-    padding: 0 7vw -5vh 35px; /* 文字の位置指定 */
+    margin: 10vh 2vw -7vh 85vw; /* ボタンの位置 */
+    padding: 0 7vw 1vh 35px; /* 文字の位置指定 */
   }
   
   /***トップへ戻るボタンここまで***/
