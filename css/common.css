@@ -347,13 +347,24 @@ color:#f3981d;
 
   /* Footer コンタクトセクション */
 
+  /* Footer コンタクトセクション */
   #footer .contact{
-    padding: 1% 7%;
+    padding: 5%;
   }
 
-  /* #footer .contact .contact-flex .li-01{
-    
-  } */
+  #footer .contact .contact-flex{
+    flex-direction: column;
+  }
+
+  #footer .contact .contact-flex .li-01{
+    padding-left: 10vw;
+    width: 90%;
+  }
+
+  #footer .contact .course-flex .li-02{
+    text-align: center;
+    width: 90%;
+  }
 
   /* li-02 SNSボタン */
   .li-02{
