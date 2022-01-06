@@ -178,11 +178,12 @@ h1{
 /* Footer コンタクトセクション */
 #footer .contact{
   background-color: #c0c0c01a;
-  padding: 4% 10%;
+  padding: 3% 10%;
 }
 
 #footer .contact .contact-flex{
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -197,6 +198,7 @@ h1{
 /* dl dt ddの調整 */
 #footer .contact .contact-flex .li-01 dl {
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
   line-height: 4vh;
 }
@@ -390,6 +392,7 @@ color:#f3981d;
 
 
   #footer .copy-right{
+    font-size: .6rem;
     height: 6vh;
     line-height: 5vh;
   }
