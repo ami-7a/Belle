@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belle | プライベートサロン ベル</title>
+  <link rel="stylesheet" href="css/ress.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/hamburger.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+  <!-- google search console 確認 -->
+  <meta name="google-site-verification" content="8Hpk19m-giDVKuIWTDgfJihsgS_ZGgdopw32FDwOYAo" />
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-215917376-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-215917376-1');
+  </script>
+
+  <meta name="description" content="">
+
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arizonia&family=Cormorant+Infant:wght@300&family=Crimson+Text&family=Zen+Old+Mincho&display=swap" rel="stylesheet">
+
+
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/931c5e739a.js" crossorigin="anonymous"></script>
+
+  <!-- jQuery読み込み -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <!-- ハンバーガーメニュー -->
+  <script>
+      $(function() {
+        $('.open_line').on("click", function(){
+    
+        $(this).toggleClass('open');
+        $('#gnav').toggleClass('open');
+      });
+    });
+    
+    // メニューをクリックされたら、非表示にする
+    $(function() {
+      $('.gnav-menu li a').on("click", function(){
+        $('#gnav').removeClass('open');
+      });
+    });
+  </script>
+
+
+  <!-- トップへのスムーズスクロールJS -->
+  <script>
+    $(function(){
+      $('a[href^="#"]').click(function(){
+        let speed = 500;
+        let href= $(this).attr("href");
+        let target = $(href == "#" || href == "" ? 'html' : href);
+        let position = target.offset().top;
+        $("html, body").animate({scrollTop:position}, speed, "swing");
+        return false;
+      });
+    });
+    
+  </script>
+
+  <!-- 各コンテンツをふっわっと表示させるJS -->
+  <script>
+    window.onload = function() {
+      scroll_effect();
+
+      $(window).scroll(function(){
+      scroll_effect();
+    });
+
+    function scroll_effect(){
+      $('.effect-fade').each(function(){
+        var elemPos = $(this).offset().top;
+        var scroll = $(window).scrollTop();
+        var windowHeight = $(window).height();
+        if (scroll > elemPos - windowHeight){
+        $(this).addClass('effect-scroll');
+        }
+      });
+      }
+    };
+  </script>
+
+  <!-- ローディングフェードイン -->
+  <script>
+    $(window).on('load',function(){
+      $("#top-fadeUp").delay(1500).fadeOut('slow');//ローディング画面を1.5秒（1500ms）待機してからフェードアウト
+      $("#top-fadeUp_logo").delay(1200).fadeOut('slow');//ロゴを1.2秒（1200ms）待機してからフェードアウト
+    });
+  </script>
+
+</head>
+<body>
+
+  <header id="header">
+
+    <!-- フェードアップ指定 -->
+    <div id="top-fadeUp">
+      <div id="top-fadeUp_logo"><img src="img/Belle man lady logo.png" alt=""></div>
+    </div>
+
+    <!-- top logo -->
+    <section class="top-logo">
+      <a href="index.html">
+        <img src="img/Belle Logo B.png" alt="Belle main logo">
+      </a>
+    </section>
+
+    <!-- nav -->
+    <section class="header-right">
+      <nav id="nav">
+
+        <li>
+          <a href="index.html"><span>TOP</span></a>
+        </li>
+
+        <li>
+          <a href="about.html" target="_blank" rel="noopener"><span>Belleについて</span></a>
+        </li>
+
+        <li>
+          <a href="course.html" target="_blank" rel="noopener"><span>コース料金</span></a>
+        </li>
+
+        <li>
+          <a href="faq.html" target="_blank" rel="noopener"><span>よくある質問</span></a>
+        </li>
+
+        
+
+      </nav>
+    </section>
+
+    <!-- ハンバーガーメニュー -->
+    <div id="hamburger">
+      <section>
+        <div class="open_line" id="btnA">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </section>
+
+      <!--ハンバーガー内のグロナビ-->
+      <nav id="gnav">
+        <div class="gnav-menu">
+
+          <div class="gnav-img"><img src="img/toplogo.png" alt="Belle gnav logo"></div>
+
+          <ul>
+            <li>
+              <a href="index.html" target="_blank" rel="noopener"><span>Topページへ</span></a>
+            </li>
+
+            <li>
+              <a href="about.html" target="_blank" rel="noopener"><span>ベルについて</span></a>
+            </li>
+    
+            <li>
+              <a href="course.html" target="_blank" rel="noopener"><span>コースと料金</span></a>
+            </li>
+    
+            <li>
+              <a href="faq.html" target="_blank" rel="noopener"><span>よくある質問</span></a>
+            </li>
+
+            <li>
+              <a href="about.html#high-jump"><p>会社概要</p></a>
+            </li>
+    
+            
+    
+          </ul>
+
+          <!-- ハンバーガーお問い合わせボタン -->
+          <section class="contact">
+       
+          </section>
+        </div>
+
+        <!--ハンバーガー内SNSセクション-->
+        <ul>
+
+          <li class="li-02 hamburger-sns">
+            <!-- インスタグラム -->
+            <a href="https://www.instagram.com/private__salon__/?hl=ja" class="sns-btn" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+  
+  
+            <!-- ラインアカウント -->
+            <a href="https://lin.ee/4OmQhsB" class="sns-btn" target="_blank" rel="noopener"><i class="fab fa-line"></i></a>
+  
+            <!-- メールフォーム -->
+            <a href="mailto:info@tiele-inc.com" class="sns-btn"><i class="far fa-envelope" target="_blank" rel="noopener"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+  </header>
+
+  <main id="main">
+
+    <!-- mainimg -->
+    <section class="mainimg">
+      <img src="img/mainimg marble.png" alt="Belle main image">
+      <!-- <img src="img/Belle door.JPG" alt=""> -->
+
+    </section>
+
+
+    <!-- コンセプトセクション -->
+    <section class="concept contents effect-fade">
+      <!-- コンセプト左 -->
+      <li class="concept-left">
+        <h1>Concept of <br> Private salon Belle</h1>
+        <p> - コンセプト - </p>
+        <p class="sub-title">当店は"完全紹介制のプライベートサロン"です。</p>
+
+        <p>人と人が繋がる空間・場所でありたいと想い、「来て良かった」「あの人に会ってほしい」が自然と広がり大切な人へと繋がっていく、そんなサロンを目指しています。
+          綺麗を提供するのはもちろん、"心身ともに"を重視し、Belleでしか味わえないおもてなしを提供いたします。</p>
+
+          <!-- 共通ボタン -->
+          <div class="btn effect-fade">
+            <a href="about.html" target="_blank" rel="noopener">Read More</a>
+          </div>
+      </li>
+
+      <!-- コンセプト右 画像-->
+      <li class="concept-right effect-fade">
+        <img src="img/hands-rings-cross with illust.png" alt="Belle hand and rings crossed image">
+      </li>
+
+    </section>
+
+
+    <!-- コースセクション -->
+    <section class="course contents effect-fade">
+      <h1>Course</h1>
+      <p>- コース料金 -</p>
+      <img class="effect-fade" src="img/course-logo.png" alt="Belle course logo">
+
+      <div class="course-flex">
+        <li class="course-left">
+          <h2>Ladies  <span> レディース</span></h2>
+          <dl>
+            <dt>全身脱毛（VIO・顔含む）</dt>
+            <dd>¥10,700~ / 月々</dd>
+            
+            <dt>腕脚脱毛</dt>
+            <dd>¥5,800~ / 月々</dd>
+
+            <dt>フェイシャル</dt>
+            <dd>¥3,000~ / 月々</dd>
+
+          </dl>
+        </li>
+
+        <li class="course-rigth">
+          <h2>Mens  <span>メンズ</span></h2>
+          <dl>
+            <dt>全身脱毛（顔含む）</dt>
+            <dd>¥15,000~ / 月々</dd>
+            
+            <dt>腕脚脱毛</dt>
+            <dd>¥8,500~ / 月々</dd>
+
+            <dt>顔脱毛</dt>
+            <dd>¥3,200~ / 月々</dd>
+
+          </dl>
+          <p class="detail-txt">※全身コース（8回/1年半）の料金です<br>※36回分割払いの場合</p>
+        </li>
+      </div>
+
+      <!-- 共通ボタン -->
+      <div class="btn effect-fade">
+        <a href="course.html" target="_blank" rel="noopener">Read More</a>
+      </div>
+
+      <p id="page-top" class="effect-fade"><a href="#">Top</a></p>
+      
+    </section>
+
+  </main>
+
+  <footer id="footer" class="effect-fade">
+    <!-- Footer コンタクトセクション -->
+    <section class="contact contents">
+      <div class="contact-flex">
+        <li class="li-01">
+          <h1>Contact</h1>
+          <p>- お問い合わせ -</p>
+        </li>
+
+        <li class="li-01">
+          <dl>
+            <!-- <dt>ADO</dt>
+            <dd class="under-line">福岡市博多区博多駅東1丁目1-30 
+              第一高田ビル501<a href="" target="_blank" rel="noopener">VIEW MAP</a></dd> -->
+            <dt>TEL本店：</dt>
+            <dd class="under-line"><a href="tel:092-260-7106" target="_blank" rel="noopener">092-260-7106(平日11:30〜20:00)</a></dd>
+            <dt>TEL博多店：</dt>
+            <dd class="under-line"><a href="tel:092-292-8331" target="_blank" rel="noopener">092-292-8331(平日11:30〜20:00)</a></dd>
+            <!-- <dt>EMAIL</dt>
+            <dd class="under-line"><a href="mailto:info@tiele-inc.com" target="_blank" rel="noopener">info@tiele-inc.com</a></dd> -->
+            <dt>LINE</dt>
+            <a href="https://lin.ee/4OmQhsB"><dd class="under-line">@075lhehw</dd></a>
+          </dl>
+        </li>
+
+        <!-- SNSボタン・お問い合わせボタン -->
+        <li class="li-02">
+          <!-- インスタグラム -->
+          <a href="https://www.instagram.com/private__salon__/?hl=ja" class="sns-btn" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+
+          <!-- ラインアカウント -->
+          <a href="https://lin.ee/4OmQhsB" class="sns-btn" target="_blank" rel="noopener"><i class="fab fa-line"></i></a>
+
+          <!-- メールフォーム -->
+          <a href="mailto:info@tiele-inc.com" class="sns-btn"><i class="far fa-envelope" target="_blank" rel="noopener"></i></a>
+
+          
+
+        </li>
+      </div>
+
+    </section>
+    <section class="copy-right">
+      ©︎2021, PRIVATE SALON BELLE, ALL RIGHTS RESERVED.
+    </section>
+  </footer>
+  
+</body>
+</html>

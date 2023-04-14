@@ -1,0 +1,133 @@
+/* アコーディオンリスト全体の調整 */
+.qa-list{
+  width: 70%;
+  margin: 10vh auto;
+}
+
+/*dlリスト全体*/
+.qa-list dl {
+  position: relative;
+  margin: 6vh 0 0;
+  cursor: pointer;
+  border: 1px solid #e6e6e6;
+}
+
+.qa-list dl:first-child {
+ margin-top: 0;
+}
+
+/*右の下向き矢印*/
+.qa-list dt::after {
+  position: absolute;
+  top: 27px;
+  right: 26px;
+  display: block;
+  width: 7px; /* 左の線 */
+  height: 7px; /* 右の線 */
+  margin: auto;
+  content: '';
+  transform: rotate(135deg);
+  border-top: 2px solid #aaaaaa; /* 左の線調整 */
+  border-right: 2px solid #aaaaaa; /* 右の線調整 */
+  transition: 1s; /* 下向きに戻す時の時間 */
+}
+
+/*開いた時の上向き矢印*/
+.qa-list .open::after {
+  transform: rotate(-45deg);
+  transition: 1s; /* 上向きにするときの時間  */
+}
+
+/*dtクエスチョンの方*/
+.qa-list dl dt {
+  position: relative;
+  margin: 0;
+  padding: 20px 20px 20px 60px;
+  font-weight: bold;
+  background: #ffdf76; /* 背景色  */
+  letter-spacing: .2vw;
+}
+
+/*Qの文字*/
+.qa-list dl dt::before {
+  font-size: 22px;
+  line-height: 1;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: block;
+  content: 'Q.';
+  color: #fafafa;
+}
+
+/*Aの文字*/
+.qa-list dl dd::before {
+  font-size: 22px;
+  line-height: 1;
+  position: absolute;
+  left: 20px;
+  display: block;
+  content: 'A.';
+  font-weight: bold;
+  color: #aaaaaa;
+}
+
+/*ddアンサーの方*/
+.qa-list dl dd{
+  position: relative;
+  margin: 0;
+  padding: 20px 20px 20px 60px;
+  letter-spacing: .2vw;
+  display: none;
+}
+
+/*アンサーのテキスト*/
+.qa-list dl dd p {
+  margin: 30px 0 0;
+}
+
+.qa-list dl dd p:first-child{
+  margin-top: 0;
+}
+
+
+@media screen and (max-width:1024px){
+
+  /* アコーディオンリスト全体の調整 */
+  .qa-list{
+    width: 90vw;
+    margin: 10vh auto;
+  }
+
+  /*dlリスト全体*/
+  .qa-list dl {
+    margin: 40px 0 0;
+  }
+
+  /*右の下矢印*/
+  .qa-list dt::after {
+    right: 20px;
+  }
+
+  /*dtクエスチョンの方*/
+  .qa-list dl dt {
+    font-size: .9em;
+  }
+
+  /*Qの文字*/
+  .qa-list dl dt::before {
+    font-size: 1.1rem;
+  }
+
+  /*Aの文字*/
+  .qa-list dl dd::before {
+    font-size: 1.1rem;
+    font-weight: normal;
+  }
+
+  /*ddアンサーの方*/
+  .qa-list dl dd{
+    font-size: .9em;
+  }
+
+}

@@ -1,0 +1,412 @@
+@charset "UTF-8";
+
+/* 共通CSS */
+
+html{
+  width: 100vw;
+  height: auto;
+}
+
+body{
+  height: auto;
+  background-color: #fffbeb;
+  color: #4d402f;
+  /* color: #332a1f; */
+  /* color: #332920; */
+  font-size: .8rem;
+  /* 英語フォント：'Crimson Text' 日本語フォント：'Zen Old Mincho' 筆記体フォント：'Arizonia' h1のフォント：'Cormorant Infant' */
+  font-family: 'Crimson Text','Zen Old Mincho',serif, cursive;;
+  text-align: left;
+  letter-spacing: .10vw;
+}
+
+a{
+  cursor: pointer;
+  text-decoration: none;
+  color: #4d402f;
+  display: inline-block;
+}
+
+img{
+  max-width: 100%;
+}
+
+li{
+  list-style:none;
+}
+
+/* header */
+#header{
+  position: fixed; /* fixedでトップ固定 */
+  width: 100vw;
+  text-align: center; /* 全部の文字中央よせ */
+  height: 11vh; /* top固定 グロナビの高さ */
+  background-color: #fff9e3;/* 背景色（他より明るめ） */
+  display: flex; /* 横並び */
+  justify-content: space-between; /* 両端に寄せる */
+  z-index: 100;
+}
+
+/* Belleロゴ */
+.top-logo img{
+  width: 25vw;
+  height: 11vh;
+  object-fit: contain;
+  padding-top: 0vh;
+  padding-left: 10%;/* 左側余白 */
+}
+
+/* nav */
+#nav{
+  display: flex;
+  justify-content: space-between;
+  line-height: 10vh;
+  width: 35vw;
+  margin: 1vh auto;
+  padding-right: 7%;/* 右側余白 */
+}
+
+/* nav４つのli */
+#nav li a{
+  padding: 0vh .5vw;
+  position: relative; /* アンダーラインのためのrelative */
+}
+
+/* nav li アンダーライン */
+#nav li a::after {
+  position: absolute;
+  bottom: 3.5vh;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: .5px;
+  background: #66553e;
+  transform: scale(0, 1);
+  transform-origin: center top;
+  transition: transform .5s;
+}
+
+#nav li a:hover::after {
+  transform: scale(1, 1);
+}
+/*** headerここまで ***/
+
+/* main */
+#main{
+  padding-top: 11vh;  /* headerの高さ（11vh）下に下げる */
+  width: 100vw;
+}
+
+/* main 各コンテンツ共通 */
+.contents{
+  margin-top: 20vh;
+}
+
+/* 下からふっわっと表示 */
+.effect-fade {
+  opacity : 0;
+  transform : translate(0, 45px);
+  transition : all 700ms;
+  transition-delay: .5s;
+}
+  
+.effect-fade.effect-scroll {
+  opacity : 1;
+  transform : translate(0, 0);
+}
+/*** 下からふっわっと表示ここまで ***/
+
+
+/* h1共通 */
+h1{
+  font-family: 'Cormorant Infant', 'Zen Old Mincho', serif;
+  font-size: 4rem;
+  font-weight: normal;
+}
+
+/* 他ページ h1共通 */
+.top-title{
+  margin: 10vh auto;
+  text-align: center;
+}
+
+/* ボタン共通 */
+.btn{
+  width: 32vw;
+}
+
+.btn a{
+  position: relative;
+  display: flex;
+  justify-content: space-between;/* 両端に寄せる */
+  align-items: center; /* 文字と矢印を一列に */
+  margin: 3vh 0vw 0vh 22vw;/* ボタンの位置指定 */
+  padding: 3% 10%;
+  width: 12vw; /* ボタン幅 */
+  font-size: .9rem; /* ボタンフォントサイズ */
+  color: #fff; /* 文字色 */
+  background-color: #616161ce;
+  box-shadow: 0 0 10px #81818181;
+  border-radius: 50vh;
+  transition: .5s; /* hover時の遅れ */
+}
+
+/* ボタン右の矢印 */
+.btn a::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: calc(2em + 5px);
+  transform: translateY(-50%) rotate(45deg);
+  width: 6px; /* 上の線の長さ*/
+  height: 6px;  /* 下の線の長さ */
+  border-top: 1px solid #fff; /*上の線調整 */
+  border-right: 1px solid #fff; /*下の線調整 */
+  transition: .3s; /* hover時の遅れ */
+}
+
+.btn a:hover {
+  background-color: #858585a4;
+}
+
+.btn a:hover::after {
+  right: calc(1.8em + 5px);
+}
+/*** mainここまで ***/
+
+
+/* Footer コンタクトセクション */
+#footer .contact{
+  background-color: #c0c0c01a;
+  padding: 3% 10%;
+}
+
+#footer .contact .contact-flex{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#footer .contact .contact-flex .li-01{
+  width: 35%;
+}
+
+#footer .contact .course-flex .li-02{
+  width: 30%;
+}
+
+/* dl dt ddの調整 */
+#footer .contact .contact-flex .li-01 dl {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  line-height: 4vh;
+}
+
+#footer .contact .contact-flex .li-01 dl dt {
+  width: 25%;
+}
+
+#footer .contact .contact-flex .li-01 dl dd {
+  width: 75%;
+}
+
+/* アンダーライン */
+.under-line a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.under-line a::after {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: .5px;
+  background: #4d402f;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: transform .5s;
+}
+
+.under-line a:hover::after {
+  transform: scale(1, 1);
+}
+
+/* li-02 SNSボタン */
+.li-02 a{
+  margin-top: 5vh;
+  margin-left: 2vw;
+}
+
+/* インスタグラムのアイコンを右に寄せる */
+.li-02 a:nth-child(1){
+  margin-left: 10vw;
+}
+
+.sns-btn{
+  display: inline-block;	
+  font-size: 5vh;
+  transition:.5s;
+}
+
+/* インスタ・ラインだけ少し大きく */
+.sns-btn .fa-instagram,.sns-btn .fa-line{
+  font-size: 5vh;
+}
+
+/* Instagram hover時 */
+.sns-btn .fa-instagram:hover{
+  color:#c6529a;
+}
+
+/* LINE hover時 */
+.sns-btn .fa-line:hover{
+  color:#00c300;
+}
+
+/* メールアイコン hover時 */
+.sns-btn .fa-envelope:hover{
+color:#f3981d;		
+}
+
+#footer .copy-right{
+  padding: 1%;
+  text-align: center;
+  background-color: #2b2b2b;
+  color: #fff;
+}
+
+
+
+@media screen and (max-width:599px) {
+
+  /* 共通CSS */
+
+  /* header */
+  #header{
+    height: 9vh; /* top固定 グロナビの高さ */
+  }
+
+  /* Belleロゴ */
+  .top-logo img{
+    width: 50vw;
+    height: 9vh;
+    padding-top: 0vh;
+  }
+
+  /* main */
+  #main{
+    padding-top: 9vh;  /* headerの高さ（9vh）下に下げる */
+  }
+
+  /* #main br{
+    display: none;
+  } */
+
+  /* main 各コンテンツ共通 */
+  .contents{
+    margin-top: 10vh;
+  }
+
+  /* h1共通 */
+  h1{
+    font-size: 3rem;
+  }
+
+  /* 他ページ h1共通 */
+  .top-title{
+    margin: 5vh auto;
+  }
+
+  .top-title h1{
+    font-size: 2.7rem;
+  }
+
+  /* ボタン共通 */
+  .btn{
+    width: 32vw;
+  }
+
+  .btn a{
+    margin: 5vh 0vw 5vh 25vw;/* ボタンの位置指定 */
+    padding: 10% 12%;
+    width: 32vw; /* ボタン幅 */
+  }
+
+  /* ボタン右の矢印 */
+  .btn a::after {
+    right: calc(1em + 2px);
+  }
+
+  .btn a:hover::after {
+    right: calc(1.5em + 3px);
+  }
+  /*** mainここまで ***/
+
+
+  /* Footer コンタクトセクション */
+  #footer .contact{
+    padding: 5%;
+  }
+
+  #footer .contact .contact-flex{
+    flex-direction: column;
+  }
+
+  #footer .contact .contact-flex .li-01{
+    margin-top: 2vh;
+    padding-left: 6vw;
+    width: 95%;
+  }
+
+  #footer .contact .course-flex .li-02{
+    text-align: center;
+    width: 90%;
+  }
+
+  #footer .contact .contact-flex .li-01 dl dt {
+    width: 35%;
+  }
+  
+  #footer .contact .contact-flex .li-01 dl dd {
+    width: 65%;
+  }
+
+  /* li-02 SNSボタン */
+  .li-02{
+     padding-right: 2vw;
+  }
+  .li-02 a{
+    margin-left: 5vw;
+  }
+
+  /* アイコンを中央に寄せる */
+  .li-02 a:nth-child(1){
+    margin-left: 27vw;
+  }
+
+  .sns-btn{
+    font-size: 3.5vh;
+  }
+
+  /* インスタ・ラインだけ少し大きく */
+  .sns-btn .fa-instagram,.sns-btn .fa-line{
+    font-size: 3.5vh;
+  }
+
+
+  #footer .copy-right{
+    font-size: .6rem;
+    height: 6vh;
+    line-height: 5vh;
+  }
+  
+}
+
+
+
+
+

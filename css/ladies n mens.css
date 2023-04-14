@@ -1,0 +1,139 @@
+#main{
+  text-align: center;
+}
+
+/* 施術範囲 女性・男性イラスト */
+.lady-body p,
+.mens-body p{
+  font-size: 1.7rem;
+}
+
+.lady-body img,
+.mens-body img{
+  width: 45%;
+  height: auto;
+  object-fit: contain;
+  margin: 1vh auto;
+}
+
+/* 男性顔 イラスト */
+.mens-face{
+  margin-top: 10vh;
+}
+
+/* スタンダードコース */
+.courses{
+  margin: 20vh auto 30vh;
+}
+
+/* コース全体の設定 */
+.courses ul{
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin: 10vh auto 3vh;
+}
+
+/* コース１つ１つの設定 */
+.courses ul li{
+  width: 30%;
+  background-color: #fffbef;
+  border: .2px solid #bbbbbb;
+  box-shadow: 0 0 5px #a0a0a0;
+  padding: 5% 4%;
+  line-height: 5vh;
+}
+
+/* メンズコース 背景色調整 */
+.mens-course ul li{
+  background-color: #5f5f5ff3;
+  color: #fff;
+}
+
+
+
+/* 各コース名 VIPコース・全身コース・腕脚コース*/
+.courses h2{
+  font-weight: normal;
+  font-size: 1.7rem;
+}
+
+/* 各料金 margin-top */
+.courses ul li .price{
+  margin-top: 2vh;
+}
+
+/* 各料金 */
+.courses ul li p span{
+  font-size: 2.3rem;
+  background-color: #f3d147b2;
+  border-radius: 10px;
+  padding: 3% 10%;
+}
+
+/* メンズ料金 背景黄色調整 */
+.mens-course ul li p span{
+  background-color: #ffe371b2;
+}
+
+/* ※36回分割払い（税込）の料金です... */
+.detail{
+  float: right;
+  margin-right: 10vw;
+  text-align: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:599px){
+
+  /* 施術範囲 女性イラスト */
+  .lady-body p,
+  .mens-body p{
+    font-size: 1.2rem;
+  }
+  
+  .lady-body img,
+  .mens-body img{
+    width: 95%;
+  }
+  
+  /* コース */
+  .courses{
+    margin: 10vh auto 25vh;
+  }
+  
+  /* コース全体の設定 */
+  .courses ul{
+    flex-direction: column;
+    width: 100%;
+    margin: 5vh auto 3vh;
+  }
+  
+  /* コース１つ１つの設定 */
+  .courses ul li{
+    width: 80%;
+    margin: 1.5vh auto;
+    padding: 7% 4%;
+  }
+  
+  /* 各料金 */
+  .courses ul li p span{
+    font-size: 2rem;
+  }
+  
+  /* ※36回分割払い（税込）の料金です... */
+  .detail{
+    margin-right: 5vw;
+  }
+  
+
+}

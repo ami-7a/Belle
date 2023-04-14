@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belle | よくある質問</title>
+  <link rel="stylesheet" href="css/ress.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/hamburger.css">
+  <link rel="stylesheet" href="css/faq.css">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-215917376-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-215917376-1');
+  </script>
+
+
+  <meta name="description" content="">
+
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arizonia&family=Cormorant+Infant:wght@300&family=Crimson+Text&family=Zen+Old+Mincho&display=swap" rel="stylesheet">
+
+
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/931c5e739a.js" crossorigin="anonymous"></script>
+
+  <!-- jQuery読み込み -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <!-- ハンバーガーメニュー -->
+  <script>
+      $(function() {
+        $('.open_line').on("click", function(){
+    
+        $(this).toggleClass('open');
+        $('#gnav').toggleClass('open');
+      });
+    });
+    
+    // メニューをクリックされたら、非表示にする
+    $(function() {
+      $('.gnav-menu li a').on("click", function(){
+        $('#gnav').removeClass('open');
+      });
+    });
+  </script>
+
+
+  <!-- トップへのスムーズスクロールJS -->
+  <script>
+    $(function(){
+      $('a[href^="#"]').click(function(){
+        let speed = 500;
+        let href= $(this).attr("href");
+        let target = $(href == "#" || href == "" ? 'html' : href);
+        let position = target.offset().top;
+        $("html, body").animate({scrollTop:position}, speed, "swing");
+        return false;
+      });
+    });
+    
+  </script>
+
+  <!-- 各コンテンツをふっわっと表示させるJS -->
+  <script>
+    window.onload = function() {
+      scroll_effect();
+
+      $(window).scroll(function(){
+      scroll_effect();
+    });
+
+    function scroll_effect(){
+      $('.effect-fade').each(function(){
+        var elemPos = $(this).offset().top;
+        var scroll = $(window).scrollTop();
+        var windowHeight = $(window).height();
+        if (scroll > elemPos - windowHeight){
+        $(this).addClass('effect-scroll');
+        }
+      });
+      }
+    };
+  </script>
+
+  <!-- アコーディオンFAQのJS -->
+  <script>
+    $(function() {
+      $('.question').click(function() {
+        //クリックされた質問部分に対する回答以外は全て閉じる
+        $('.question').not(this).next().slideUp(400);
+        
+        //クリックされた質問に対する回答を表示する
+        $(this).next().slideToggle(300);
+        $(this).toggleClass('open');
+      });
+    });
+  </script>
+
+
+</head>
+<body>
+
+  <header id="header">
+
+    <!-- top logo -->
+    <section class="top-logo">
+      <a href="index.html">
+        <img src="img/Belle Logo B.png" alt="Belle main logo">
+      </a>
+    </section>
+
+    <!-- nav -->
+    <section class="header-right">
+      <nav id="nav">
+
+        <li>
+          <a href="index.html"><span>TOP</span></a>
+        </li>
+
+        <li>
+          <a href="about.html" target="_blank" rel="noopener"><span>Belleについて</span></a>
+        </li>
+
+        <li>
+          <a href="course.html" target="_blank" rel="noopener"><span>コース料金</span></a>
+        </li>
+
+        <li>
+          <a href="faq.html" target="_blank" rel="noopener"><span>よくある質問</span></a>
+        </li>
+
+        
+
+      </nav>
+    </section>
+
+    <!-- ハンバーガーメニュー -->
+    <div id="hamburger">
+      <section>
+        <div class="open_line" id="btnA">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </section>
+
+      <!--ハンバーガー内のグロナビ-->
+      <nav id="gnav">
+        <div class="gnav-menu">
+
+          <div class="gnav-img"><img src="img/toplogo.png" alt="Belle gnav logo"></div>
+
+          <ul>
+            <li>
+              <a href="index.html" target="_blank" rel="noopener"><span>Topページへ</span></a>
+            </li>
+
+            <li>
+              <a href="about.html" target="_blank" rel="noopener"><span>ベルについて</span></a>
+            </li>
+    
+            <li>
+              <a href="course.html" target="_blank" rel="noopener"><span>コースと料金</span></a>
+            </li>
+    
+            <li>
+              <a href="faq.html" target="_blank" rel="noopener"><span>よくある質問</span></a>
+            </li>
+
+            <li>
+              <a href="about.html#high-jump">
+                <p>会社概要</p>
+                
+              </a>
+            </li>
+    
+            
+    
+          </ul>
+
+          <!-- ハンバーガーお問い合わせボタン -->
+          <section class="contact">
+       
+          </section>
+        </div>
+
+        <!--ハンバーガー内SNSセクション-->
+        <ul>
+
+          <li class="li-02 hamburger-sns">
+            <!-- インスタグラム -->
+            <a href="https://www.instagram.com/private__salon__/?hl=ja" class="sns-btn" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+  
+  
+            <!-- ラインアカウント -->
+            <a href="https://lin.ee/4OmQhsB" class="sns-btn" target="_blank" rel="noopener"><i class="fab fa-line"></i></a>
+  
+            <!-- メールフォーム -->
+            <a href="mailto:info@tiele-inc.com" class="sns-btn"><i class="far fa-envelope" target="_blank" rel="noopener"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+  </header>
+
+  <main id="main">
+    <!--共通セクションタイトル-->
+    <section class="top-title">
+      <h1>FAQ</h1>
+      <p class="">-よくある質問-</p>
+    </section>
+
+    <!--メインイメージ-->
+    
+    <!-- アコーディオンリスト -->
+    <div class="qa-list">
+      <dl>
+        <dt class="question">未成年ですが大丈夫ですか？</dt>
+        <dd class="answer">
+          <p>未成年者様でも親御様の同意があれば通っていただくことは可能です。最近では未成年者様の会員様も多くいらっしゃいますので是非体験へお越しください。</p>
+        </dd>
+      </dl>
+
+      <dl>
+        <dt class="question">生理になってしまった場合どうしたらいいですか？</dt>
+        <dd class="answer">
+          <p>生理の場合でも腰おしりVIO以外であれば施術可能となりますので予約を取り直して頂く必要はありません。前日からお薬の服用を避けていただくようにお願いしております。当日どうしても体調が優れない場合はご連絡をお願いします。 </p>
+        </dd>
+      </dl>
+      
+      <dl>
+        <dt class="question">薬ではなくサプリは飲んでも大丈夫ですか？</dt>
+        <dd class="answer">
+          <p>サプリメントなどビタミン剤や栄養ドリンクは服用されても問題ありません。お医者様に処方されたお薬や市販の風邪薬などは前日から避けて頂いておりますのでご注意ください。 </p>
+        </dd>
+      </dl>
+      
+      <dl>
+        <dt class="question">当日メイクをして行ってもいいですか？</dt>
+        <dd class="answer">
+          <p>もちろん大丈夫です。お顔の施術がある方はできればノーファンデーションのご協力をお願いしておりますがメイク落としを準備しておりますのでお店で落とす事も可能です！帰りにお直し出来るようにメイクルームも完備しております。</p>
+        </dd>
+      </dl>
+
+      <dl>
+        <dt class="question">肌が弱くても大丈夫ですか？</dt>
+        <dd class="answer">
+          <p>大丈夫です。スタッフが1人1人のお肌の状態を見て、機械のレベルの調節をし施術を行っていきます。アトピーなどで皮膚科に通われている方や、ステロイドどの抗生物質を使用されている方は最初にパッチテストを行っていきますのでご安心ください。 </p>
+        </dd>
+      </dl>
+
+      <dl>
+        <dt class="question">脱毛期間中の自己処理はどうしたらいいですか？</dt>
+        <dd class="answer">
+          <p>自己処理はして頂いて大丈夫ですが、効果を引き出す為にも、なるべく回数を減らしていただくようお願いしております。自己処理の際はカミソリ、毛抜き等だとお肌を痛めてしまうため、電気シェーバーでの自己処理をおすすめしております。</p>
+        </dd>
+      </dl>
+
+      <dl>
+        <dt class="question">どれぐらいの期間で抜けてきますか？</dt>
+        <dd class="answer">
+          <p>光をあてて大体10日〜3週間程で抜けてき始めます。その期間に保湿と自己処理をなるべく行わない事で効果を最大限に出していけます。 </p>
+        </dd>
+      </dl>
+
+      <dl>
+        <dt class="question">痛いですか？</dt>
+        <dd class="answer">
+          <p>当店採用のハイブリッド脱毛はひとつの機械でお肌を約－4℃に冷やしながら照射していきますのでじんわり温かさを感じる程度で痛みを感じにくいものとなっております。体験時にパッチテストで痛みがないか赤みやヒリつきが出ないかご契約前に確認できますのでご不安な方はお申し付けください。 </p>
+        </dd>
+      </dl>
+
+      <dl>
+        <dt class="question">男性でもツルツルにしますか？</dt>
+        <dd class="answer">
+          <p>当店ではツルツルにしたい方、毛量を減らし毛質を細くしたい方など理想に合わせた2つのコースをご準備しております。ご希望に合わせることができるのでご相談ください。 </p>
+        </dd>
+      </dl>
+
+      <dl>
+        <dt class="question">通う頻度はどれくらいですか？</dt>
+        <dd class="answer">
+          <p>1ヶ月半～2ヶ月半に1回で毛周期に合わせ、お客様と相談しながらアドバイスさせていただきます。男性のヒゲ脱毛は剃る頻度も多い箇所ですので、初めは最短の2週間～1ヶ月に1回の頻度をおすすめしております。 </p>
+        </dd>
+      </dl>
+
+      <dl>
+        <dt class="question">医療脱毛と美容脱毛の違いは何ですか？</dt>
+        <dd class="answer">
+          <p>お医者様が在籍かどうかの違いになります。<br>
+            医療脱毛は1回の照射面で照射可能な毛が3~4本に対し、当店の脱毛は広い照射面ですので当て漏れがほとんど無く、細かい部分まで丁寧に施術させて頂きます。毛だけではなく、肌も活性化させる光も含まれており、毛穴が目立ちにくくきめ細やかな美肌に導きます。</p>
+        </dd>
+      </dl>
+
+      <dl>
+        <dt class="question">脱毛する前の注意することはありますか？</dt>
+        <dd class="answer">
+          <p>1つ目は日焼けを避けることです。<br>
+            日焼けをすると肌がダメージを受けるため、施術時に痛みを感じやすく肌にトラブルが生じやすくなります。そのため、安全性に配慮し、日焼け直後のお客様には脱毛施術を行っておりませんので、ご了承ください。<br>2つ目はカミソリ、毛抜きでの自己処理はしないことです。<br>
+            施術前に自己処理が必要な場合には、施術の数日前にシェービングを行ってください。<br>
+            3つ目は飲酒やスポーツなど、体温の上昇を避けることです。<br>
+            体温が上昇すると肌が敏感になり、施術時に思わぬ肌のトラブルが生じることがあります。
+            お客様の体質によって異なる点もございますので、カウンセリングの際に注意点を個別にお伝えしております。<br>
+            ご不明点やご心配がある場合には、ぜひご相談ください </p>
+        </dd>
+      </dl>
+
+      <dl>
+        <dt class="question">金額の相場を教えてください</dt>
+        <dd class="answer">
+          <p>全身脱毛は月々10,000円から通うことができます。部分のみをご希望の方は月々3,000円からのプランもご用意してますのでお気軽にご相談ください。１回料金で通うことも出来ますのでご希望に添ったプランを提供させて頂きます。 </p>
+        </dd>
+      </dl>
+    </div>
+
+    
+  </main>
+
+  <footer id="footer" class="effect-fade">
+    <!-- Footer コンタクトセクション -->
+    <section class="contact contents">
+      <div class="contact-flex">
+        <li class="li-01">
+          <h1>Contact</h1>
+          <p>- お問い合わせ -</p>
+        </li>
+
+        <li class="li-01">
+          <dl>
+            <!-- <dt>ADO</dt>
+            <dd class="under-line">福岡市博多区博多駅東1丁目1-30 
+              第一高田ビル501<a href="" target="_blank" rel="noopener">VIEW MAP</a></dd> -->
+            <dt>TEL本店：</dt>
+            <dd class="under-line"><a href="tel:092-260-7106" target="_blank" rel="noopener">092-260-7106(平日11:30〜20:00)</a></dd>
+            <dt>TEL博多店：</dt>
+            <dd class="under-line"><a href="tel:092-292-8331" target="_blank" rel="noopener">092-292-8331(平日11:30〜20:00)</a></dd>
+            <!-- <dt>EMAIL</dt>
+            <dd class="under-line"><a href="mailto:info@tiele-inc.com" target="_blank" rel="noopener">info@tiele-inc.com</a></dd> -->
+            <dt>LINE</dt>
+            <a href="https://lin.ee/4OmQhsB"><dd class="under-line">@075lhehw</dd></a>
+          </dl>
+        </li>
+
+        <!-- SNSボタン・お問い合わせボタン -->
+        <li class="li-02">
+          <!-- インスタグラム -->
+          <a href="https://www.instagram.com/private__salon__/?hl=ja" class="sns-btn" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+
+          <!-- ラインアカウント -->
+          <a href="https://lin.ee/4OmQhsB" class="sns-btn" target="_blank" rel="noopener"><i class="fab fa-line"></i></a>
+
+          <!-- メールフォーム -->
+          <a href="mailto:info@tiele-inc.com" class="sns-btn"><i class="far fa-envelope" target="_blank" rel="noopener"></i></a>
+
+          
+
+        </li>
+      </div>
+
+    </section>
+    <section class="copy-right">
+      ©︎2021, PRIVATE SALON BELLE, ALL RIGHTS RESERVED.
+    </section>
+  </footer>
+  
+</body>
+</html>

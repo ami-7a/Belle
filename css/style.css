@@ -1,0 +1,294 @@
+/* TOPページ CSS */
+
+/* 開いた時の画面表示 フェードアップ*/
+#top-fadeUp {
+/*fixedで全面に固定*/
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  background:#fff8ea;
+}
+
+/* 画像中央配置*/
+#top-fadeUp_logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* logoの大きさ*/
+#top-fadeUp_logo img {
+  width:25vw;
+  height: auto;
+  object-fit: contain;
+
+  /* フェードアップアニメーション */
+  animation-name: fadeUpAnimetion;
+  animation-duration:0.5s;
+  animation-fill-mode:forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUpAnimetion{
+  from {
+    opacity: 0;
+  transform: translateY(100px);
+  }
+  
+  to {
+    opacity: 1;
+  transform: translateY(0);
+  }
+}
+
+
+/* mainimg */
+.mainimg img{ /* mainimgをトップ画面の高さに合わせる */
+  width: 100vw;
+  height: 89vh;
+  object-fit: cover;
+}
+
+
+/* コンセプトセクション */
+.concept{
+  display: flex;/* コンテンツを横並び */
+}
+
+.concept li{
+  width: 50%;
+}
+
+/* コンセプト左 */
+.concept .concept-left{
+  padding-left: 13vw;
+  padding-top: 3vh;
+}
+
+.concept .concept-left p{
+  line-height: 6vh;
+}
+
+/* ”完全紹介制プライベートサロン */
+.concept .concept-left .sub-title{
+  font-size: 1.2rem;
+  margin: 1vh auto;
+}
+
+
+/* コンセプト右 画像*/
+.concept .concept-right img{
+  width: auto;
+  height: 75vh;
+  object-fit: cover;
+  padding-left: 5vw;
+}
+/*** コンセプトセクションここまで ***/
+
+
+/* コースセクション */
+.course{
+  width: 80vw;
+  margin: 20vh auto;
+  text-align: center;
+}
+
+/* コースのロゴ */
+.course img{
+  height: 30vh;
+  object-fit: contain;
+  margin-left: 1vw;
+}
+
+.course .course-flex{
+  display: flex;
+  justify-content: space-between;
+  margin: 2vh auto;
+}
+
+.course .course-flex li{
+  width: 45%;
+}
+
+/* Mens/Ladies */
+.course .course-flex li h2{
+  font-family: 'Cormorant Infant', 'Zen Old Mincho', serif;
+  font-weight: normal;
+  font-size: 1.4rem;
+}
+
+/* メンズ レディース */
+.course .course-flex li h2 span{
+  font-size: .9rem;
+}
+
+/* コース料金リスト */
+.course .course-flex dl { 
+  display: flex; /* 横並びに */
+  flex-wrap: wrap;
+  margin-top: 2vh;
+}
+
+/* dl 左側 */
+.course .course-flex dt {
+  width: 40%;
+  padding: 3%;
+  background-color: #f3d147b2;
+  margin: 0 0 10px 0;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* dd 右側 */
+.course .course-flex dd {
+  width: 60%;
+  padding: 3%;
+  background-color: #c0c0c01a;
+  margin: 0 0 10px 0;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.detail-txt{
+  text-align: right
+}
+
+/* コースのボタン 中央寄 */
+.course .btn{
+  margin: -4vh 0vw 0vh 12vw;
+}
+/*** コースセクションここまで ***/
+
+
+/*トップへスクロールするボタン*/
+#page-top {
+  margin: 15vh 0vw -12vh 85vw; /* ボタンの位置 */
+  transform: rotate(90deg);/* 矢印を縦向きに */
+  line-height: 1.5rem; /* 矢印と文字の幅 */
+  padding: 0 0 0 35px; /* 文字の位置指定 */
+  border-top: solid 1px;/* 縦線の設定 */
+  width: 5vw;/* 縦線の長さ */
+}
+
+/* 矢印側の長さ */
+#page-top::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0px;
+  width: 1.5vh; /* 線の長さ */
+  border-top: solid 1px;
+  transform: rotate(35deg);
+  transform-origin: left top;
+}
+/***トップへ戻るボタンここまで***/
+
+
+
+
+
+
+@media screen and (max-width:599px){
+
+  /* 画像中央配置*/
+  #top-fadeUp_logo {
+    top: 45%;
+  }
+
+  /* logoの大きさ*/
+  #top-fadeUp_logo img {
+    width:50vw;
+  }
+
+
+  /* mainimg */
+  .mainimg img{ /* mainimgをトップ画面の高さに合わせる */
+    width: 100vw;
+    height: 91vh;
+  }
+
+  /* コンセプトセクション */
+  .concept{
+    flex-direction: column;/* コンテンツを縦並び */
+  }
+
+  .concept li{
+    width: 95%;
+  }
+
+  /* コンセプト上 */
+  .concept .concept-left{
+    padding-left: 8vw;
+    padding-top: 0vh;
+  }
+
+  .concept .concept-left p{
+    line-height: 5vh;
+  }
+
+  /* コンセプト下 画像*/
+  .concept .concept-right img{
+    width: 90vw;
+    height: 50vh;
+    padding-left: 7vw;
+  }
+  /*** コンセプトセクションここまで ***/
+
+
+  /* コースセクション */
+  .course{
+    width: 100vw;
+    margin: 10vh auto;
+  }
+
+  /* コースのロゴ */
+  .course img{
+    height: 15vh;
+  }
+
+  .course .course-flex{
+    flex-direction: column;
+  }
+
+  .course .course-flex li{
+    width: 90%;
+    margin: 2vh auto;
+  }
+
+  /* Mens/Ladies */
+  .course .course-flex li h2{
+    font-size: 1.2rem;
+  }
+
+  /* メンズ レディース */
+  .course .course-flex li h2 span{
+    font-size: .8rem;
+  }
+
+  .detail-txt{
+    font-size: .7rem;
+  }
+
+  /* コースのボタン 中央寄 */
+  .course .btn{
+    margin: -4vh 0vw 0vh 10vw;
+  }
+  /*** コースセクションここまで ***/
+
+
+  /*トップへスクロールするボタン*/
+  #page-top {
+    margin: 10vh 2vw -7vh 85vw; /* ボタンの位置 */
+    padding: 0 7vw 1vh 35px; /* 文字の位置指定 */
+  }
+  
+  /***トップへ戻るボタンここまで***/
+
+
+
+}
