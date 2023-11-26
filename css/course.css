@@ -34,7 +34,7 @@
   font-size: 1rem; /* ボタンフォントサイズ */
   color: #fff; /* 文字色 */
   background-color: #666666af; /* Menの背景色 */
-  box-shadow: 0 0 10px #8181816e;
+  box-shadow: 2px 2px 5px rgba(159,159,159,.3019607843);;
   border-radius: 50vh;
   transition: .5s; /* hover時の遅れ */
 }

@@ -90,8 +90,9 @@
 
 /* コースセクション */
 .course{
-  width: 80vw;
-  margin: 20vh auto;
+  padding: 0 10px;
+  max-width: 1100px;
+  margin: 100px auto;
   text-align: center;
 }
 
@@ -109,7 +110,7 @@
 }
 
 .course .course-flex li{
-  width: 45%;
+  width: 48%;
 }
 
 /* Mens/Ladies */
@@ -133,8 +134,8 @@
 
 /* dl 左側 */
 .course .course-flex dt {
-  width: 40%;
-  padding: 3%;
+  width: 45%;
+  padding: 20px 0px;
   background-color: #f3d147b2;
   margin: 0 0 10px 0;
   border-top-left-radius: 3px;
@@ -146,8 +147,8 @@
 
 /* dd 右側 */
 .course .course-flex dd {
-  width: 60%;
-  padding: 3%;
+  width: 55%;
+  padding: 20px 0px;
   background-color: #c0c0c01a;
   margin: 0 0 10px 0;
   border-top-right-radius: 3px;
@@ -158,10 +159,6 @@
   text-align: right
 }
 
-/* コースのボタン 中央寄 */
-.course .btn{
-  margin: -4vh 0vw 0vh 12vw;
-}
 /*** コースセクションここまで ***/
 
 
@@ -218,12 +215,13 @@
   }
 
   .concept li{
-    width: 95%;
+    width: 100%;
   }
 
   /* コンセプト上 */
   .concept .concept-left{
-    padding-left: 8vw;
+    width: 100%;
+    padding: 0 20px;
     padding-top: 0vh;
   }
 
@@ -233,9 +231,10 @@
 
   /* コンセプト下 画像*/
   .concept .concept-right img{
-    width: 90vw;
+    width: 100%;
     height: 50vh;
-    padding-left: 7vw;
+    padding: 0 20px;
+    object-fit: contain;
   }
   /*** コンセプトセクションここまで ***/
 
@@ -256,7 +255,7 @@
   }
 
   .course .course-flex li{
-    width: 90%;
+    width: 100%;
     margin: 2vh auto;
   }
 
@@ -274,17 +273,14 @@
     font-size: .7rem;
   }
 
-  /* コースのボタン 中央寄 */
-  .course .btn{
-    margin: -4vh 0vw 0vh 10vw;
-  }
   /*** コースセクションここまで ***/
 
 
   /*トップへスクロールするボタン*/
   #page-top {
-    margin: 10vh 2vw -7vh 85vw; /* ボタンの位置 */
-    padding: 0 7vw 1vh 35px; /* 文字の位置指定 */
+    margin: 0;
+    padding: 0 7vw 1vh 35px;
+    float: right;
   }
   
   /***トップへ戻るボタンここまで***/

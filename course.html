@@ -1,285 +1,301 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Belle | 各コース・料金</title>
-  <link rel="stylesheet" href="css/ress.css">
-  <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="css/hamburger.css">
-  <link rel="stylesheet" href="css/course.css">
-  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belle | 各コース・料金</title>
+    <link rel="stylesheet" href="css/ress.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/hamburger.css" />
+    <link rel="stylesheet" href="css/course.css" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-215917376-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-215917376-1');
-  </script>
-
-
-  <meta name="description" content="">
-
-  <!-- google fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Arizonia&family=Cormorant+Infant:wght@300&family=Crimson+Text&family=Zen+Old+Mincho&display=swap" rel="stylesheet">
-
-
-  <!-- font awesome -->
-  <script src="https://kit.fontawesome.com/931c5e739a.js" crossorigin="anonymous"></script>
-
-  <!-- jQuery読み込み -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-  <!-- ハンバーガーメニュー -->
-  <script>
-      $(function() {
-        $('.open_line').on("click", function(){
-    
-        $(this).toggleClass('open');
-        $('#gnav').toggleClass('open');
-      });
-    });
-    
-    // メニューをクリックされたら、非表示にする
-    $(function() {
-      $('.gnav-menu li a').on("click", function(){
-        $('#gnav').removeClass('open');
-      });
-    });
-  </script>
-
-
-  <!-- トップへのスムーズスクロールJS -->
-  <script>
-    $(function(){
-      $('a[href^="#"]').click(function(){
-        let speed = 500;
-        let href= $(this).attr("href");
-        let target = $(href == "#" || href == "" ? 'html' : href);
-        let position = target.offset().top;
-        $("html, body").animate({scrollTop:position}, speed, "swing");
-        return false;
-      });
-    });
-    
-  </script>
-
-  <!-- 各コンテンツをふっわっと表示させるJS -->
-  <script>
-    window.onload = function() {
-      scroll_effect();
-
-      $(window).scroll(function(){
-      scroll_effect();
-    });
-
-    function scroll_effect(){
-      $('.effect-fade').each(function(){
-        var elemPos = $(this).offset().top;
-        var scroll = $(window).scrollTop();
-        var windowHeight = $(window).height();
-        if (scroll > elemPos - windowHeight){
-        $(this).addClass('effect-scroll');
-        }
-      });
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-215917376-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
       }
-    };
-  </script>
+      gtag("js", new Date());
 
-</head>
-<body>
+      gtag("config", "UA-215917376-1");
+    </script>
 
-  <header id="header">
+    <meta name="description" content="" />
 
-    <!-- top logo -->
-    <section class="top-logo">
-      <a href="index.html">
-        <img src="img/Belle Logo B.png" alt="Belle main logo">
-      </a>
-    </section>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arizonia&family=Cormorant+Infant:wght@300&family=Crimson+Text&family=Zen+Old+Mincho&display=swap"
+      rel="stylesheet"
+    />
 
-    <!-- nav -->
-    <section class="header-right">
-      <nav id="nav">
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/931c5e739a.js"
+      crossorigin="anonymous"
+    ></script>
 
-        <li>
-          <a href="index.html"><span>TOP</span></a>
-        </li>
-
-        <li>
-          <a href="about.html" target="_blank" rel="noopener"><span>Belleについて</span></a>
-        </li>
-
-        <li>
-          <a href="course.html" target="_blank" rel="noopener"><span>コース料金</span></a>
-        </li>
-
-        <li>
-          <a href="faq.html" target="_blank" rel="noopener"><span>よくある質問</span></a>
-        </li>
-
-
-      </nav>
-    </section>
+    <!-- jQuery読み込み -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <!-- ハンバーガーメニュー -->
-    <div id="hamburger">
-      <section>
-        <div class="open_line" id="btnA">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+    <script>
+      $(function () {
+        $(".open_line").on("click", function () {
+          $(this).toggleClass("open");
+          $("#gnav").toggleClass("open");
+        });
+      });
+
+      // メニューをクリックされたら、非表示にする
+      $(function () {
+        $(".gnav-menu li a").on("click", function () {
+          $("#gnav").removeClass("open");
+        });
+      });
+    </script>
+
+    <!-- トップへのスムーズスクロールJS -->
+    <script>
+      $(function () {
+        $('a[href^="#"]').click(function () {
+          let speed = 500;
+          let href = $(this).attr("href");
+          let target = $(href == "#" || href == "" ? "html" : href);
+          let position = target.offset().top;
+          $("html, body").animate({ scrollTop: position }, speed, "swing");
+          return false;
+        });
+      });
+    </script>
+
+    <!-- 各コンテンツをふっわっと表示させるJS -->
+    <script>
+      window.onload = function () {
+        scroll_effect();
+
+        $(window).scroll(function () {
+          scroll_effect();
+        });
+
+        function scroll_effect() {
+          $(".effect-fade").each(function () {
+            var elemPos = $(this).offset().top;
+            var scroll = $(window).scrollTop();
+            var windowHeight = $(window).height();
+            if (scroll > elemPos - windowHeight) {
+              $(this).addClass("effect-scroll");
+            }
+          });
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <header id="header">
+      <!-- top logo -->
+      <section class="top-logo">
+        <a href="index.html">
+          <img src="img/Belle Logo B.png" alt="Belle main logo" />
+        </a>
       </section>
 
-      <!--ハンバーガー内のグロナビ-->
-      <nav id="gnav">
-        <div class="gnav-menu">
-
-          <div class="gnav-img"><img src="img/toplogo.png" alt="Belle gnav logo"></div>
-
-          <ul>
-            <li>
-              <a href="index.html" target="_blank" rel="noopener"><span>Topページへ</span></a>
-            </li>
-
-            <li>
-              <a href="about.html" target="_blank" rel="noopener"><span>ベルについて</span></a>
-            </li>
-    
-            <li>
-              <a href="course.html" target="_blank" rel="noopener"><span>コースと料金</span></a>
-            </li>
-    
-            <li>
-              <a href="faq.html" target="_blank" rel="noopener"><span>よくある質問</span></a>
-            </li>
-
-            <li>
-              <a href="about.html#high-jump">
-                <p>会社概要</p>
-                
-              </a>
-            </li>
-    
-            
-
-          </ul>
-
-          <!-- ハンバーガーお問い合わせボタン -->
-          <section class="contact">
-       
-          </section>
-        </div>
-
-        <!--ハンバーガー内SNSセクション-->
-        <ul>
-
-          <li class="li-02 hamburger-sns">
-            <!-- インスタグラム -->
-            <a href="https://www.instagram.com/private__salon__/?hl=ja" class="sns-btn" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
-  
-  
-            <!-- ラインアカウント -->
-            <a href="https://lin.ee/4OmQhsB" class="sns-btn" target="_blank" rel="noopener"><i class="fab fa-line"></i></a>
-  
-            <!-- メールフォーム -->
-            <a href="mailto:info@tiele-inc.com" class="sns-btn"><i class="far fa-envelope" target="_blank" rel="noopener"></i></a>
+      <!-- nav -->
+      <section class="header-right">
+        <nav id="nav">
+          <li>
+            <a href="index.html"><span>TOP</span></a>
           </li>
-        </ul>
-      </nav>
-    </div>
 
-  </header>
+          <li>
+            <a href="about.html"><span>Belleについて</span></a>
+          </li>
 
-  <main id="main">
-    <!-- トップタイトル -->
-    <div class="top-title effect-fade">
-      <h1>Course & Price</h1>
-      <p>コース料金</p>
-    </div>
+          <li>
+            <a href="course.html"><span>コース料金</span></a>
+          </li>
 
-    <!-- トップロゴ -->
-    <section class="logo effect-fade">
-      <img src="img/course-logo.png" alt="">
-    </section>
+          <li>
+            <a href="faq.html"><span>よくあるご質問</span></a>
+          </li>
+        </nav>
+      </section>
 
-    <!-- 性別選択ボタン -->
-    <section class="gender-select-btn effect-fade">
-    
-      <!-- レディースボタン -->
-      <li class="lady">
-        <a href="ladies.html" target="_blank" rel="noopener">
-          <p>Ladies</p>
-          <p>女性コースはこちら</p>
-        </a>
-      </li>
+      <!-- ハンバーガーメニュー -->
+      <div id="hamburger">
+        <section>
+          <div class="open_line" id="btnA">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </section>
 
-      <!-- メンズボタン -->
-      <li class="men">
-        <a href="mens.html" target="_blank" rel="noopener">
-          <p>Mens</p>
-          <p>男性コースはこちら</p>
-        </a>
-      </li>
+        <!--ハンバーガー内のグロナビ-->
+        <nav id="gnav">
+          <div class="gnav-menu">
+            <div class="gnav-img">
+              <img src="img/toplogo.png" alt="Belle gnav logo" />
+            </div>
 
-    </section>
+            <ul>
+              <li>
+                <a href="index.html"><span>Topページへ</span></a>
+              </li>
 
-    
-  </main>
+              <li>
+                <a href="about.html"><span>ベルについて</span></a>
+              </li>
 
-  <footer id="footer" class="effect-fade">
-    <!-- Footer コンタクトセクション -->
-    <section class="contact contents">
-      <div class="contact-flex">
-        <li class="li-01">
-          <h1>Contact</h1>
-          <p>- お問い合わせ -</p>
-        </li>
+              <li>
+                <a href="course.html"><span>コースと料金</span></a>
+              </li>
 
-        <li class="li-01">
-          <dl>
-            <!-- <dt>ADO</dt>
-            <dd class="under-line">福岡市博多区博多駅東1丁目1-30 
-              第一高田ビル501<a href="" target="_blank" rel="noopener">VIEW MAP</a></dd> -->
-            <dt>TEL本店：</dt>
-            <dd class="under-line"><a href="tel:092-260-7106" target="_blank" rel="noopener">092-260-7106(平日11:30〜20:00)</a></dd>
-            <dt>TEL博多店：</dt>
-            <dd class="under-line"><a href="tel:092-292-8331" target="_blank" rel="noopener">092-292-8331(平日11:30〜20:00)</a></dd>
-            <!-- <dt>EMAIL</dt>
-            <dd class="under-line"><a href="mailto:info@tiele-inc.com" target="_blank" rel="noopener">info@tiele-inc.com</a></dd> -->
-            <dt>LINE</dt>
-            <a href="https://lin.ee/4OmQhsB"><dd class="under-line">@075lhehw</dd></a>
-          </dl>
-        </li>
+              <li>
+                <a href="faq.html"><span>よくあるご質問</span></a>
+              </li>
 
-        <!-- SNSボタン・お問い合わせボタン -->
-        <li class="li-02">
-          <!-- インスタグラム -->
-          <a href="https://www.instagram.com/private__salon__/?hl=ja" class="sns-btn" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+              <li>
+                <a href="about.html#high-jump">
+                  <p>会社概要</p>
+                </a>
+              </li>
+            </ul>
 
-          <!-- ラインアカウント -->
-          <a href="https://lin.ee/4OmQhsB" class="sns-btn" target="_blank" rel="noopener"><i class="fab fa-line"></i></a>
+            <!-- ハンバーガーお問い合わせボタン -->
+            <section class="contact"></section>
+          </div>
 
-          <!-- メールフォーム -->
-          <a href="mailto:info@tiele-inc.com" class="sns-btn"><i class="far fa-envelope" target="_blank" rel="noopener"></i></a>
+          <!--ハンバーガー内SNSセクション-->
+          <ul>
+            <li class="li-02 hamburger-sns">
+              <!-- インスタグラム -->
+              <a
+                href="https://www.instagram.com/private__salon__/?hl=ja"
+                class="sns-btn"
+                target="_blank"
+                rel="noopener"
+                ><i class="fab fa-instagram"></i
+              ></a>
 
-          
+              <!-- ラインアカウント -->
+              <a
+                href="https://lin.ee/4OmQhsB"
+                class="sns-btn"
+                target="_blank"
+                rel="noopener"
+                ><i class="fab fa-line"></i
+              ></a>
 
-        </li>
+              <!-- メールフォーム -->
+              <a href="mailto:info@tiele-inc.com" class="sns-btn"
+                ><i class="far fa-envelope"></i
+              ></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- トップタイトル -->
+      <div class="top-title effect-fade">
+        <h1>Course & Price</h1>
+        <p>コース料金</p>
       </div>
 
-    </section>
-    <section class="copy-right">
-      ©︎2021, PRIVATE SALON BELLE, ALL RIGHTS RESERVED.
-    </section>
-  </footer>
-  
-</body>
+      <!-- トップロゴ -->
+      <section class="logo effect-fade">
+        <img src="img/course-logo.png" alt="" />
+      </section>
+
+      <!-- 性別選択ボタン -->
+      <section class="gender-select-btn effect-fade">
+        <!-- レディースボタン -->
+        <li class="lady">
+          <a href="ladies.html">
+            <p>Ladies</p>
+            <p>女性コースはこちら</p>
+          </a>
+        </li>
+
+        <!-- メンズボタン -->
+        <li class="men">
+          <a href="mens.html">
+            <p>Mens</p>
+            <p>男性コースはこちら</p>
+          </a>
+        </li>
+      </section>
+    </main>
+
+    <footer id="footer" class="effect-fade">
+      <!-- Footer コンタクトセクション -->
+      <section class="contact contents">
+        <div class="contact-flex">
+          <li class="li-01">
+            <h1>Contact</h1>
+            <p>- お問い合わせ -</p>
+          </li>
+
+          <li class="li-01">
+            <dl>
+              <dt>TEL本店：</dt>
+              <dd class="under-line">
+                <a href="tel:092-260-7106">092-260-7106(平日11:30〜20:00)</a>
+              </dd>
+              <dt>TEL博多店：</dt>
+              <dd class="under-line">
+                <a href="tel:092-292-8331">092-292-8331(平日11:30〜20:00)</a>
+              </dd>
+              <dt>TEL久留米店：</dt>
+              <dd class="under-line">
+                <a href="tel:0942-25-9320">0942-25-9320(平日11:30〜20:00)</a>
+              </dd>
+              <dt>LINE</dt>
+              <dd class="under-line">
+                <a href="https://lin.ee/4OmQhsB">@075lhehw</a>
+              </dd>
+            </dl>
+          </li>
+
+          <!-- SNSボタン・お問い合わせボタン -->
+          <li class="li-02">
+            <!-- インスタグラム -->
+            <a
+              href="https://www.instagram.com/private__salon__/?hl=ja"
+              class="sns-btn"
+              target="_blank"
+              rel="noopener"
+              ><i class="fab fa-instagram"></i
+            ></a>
+
+            <!-- ラインアカウント -->
+            <a
+              href="https://lin.ee/4OmQhsB"
+              class="sns-btn"
+              target="_blank"
+              rel="noopener"
+              ><i class="fab fa-line"></i
+            ></a>
+
+            <!-- メールフォーム -->
+            <a href="mailto:info@tiele-inc.com" class="sns-btn"
+              ><i class="far fa-envelope"></i
+            ></a>
+          </li>
+        </div>
+      </section>
+      <section class="copy-right">
+        ©︎2021, PRIVATE SALON BELLE, ALL RIGHTS RESERVED.
+      </section>
+    </footer>
+  </body>
 </html>

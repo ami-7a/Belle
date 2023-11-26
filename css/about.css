@@ -1,74 +1,71 @@
 /* 流動する丸 全体設定 */
-.fluid{
+.fluid {
   background: #f3d147b2;
-  animation: fluidrotate 30s ease 0s infinite;/*アニメーション設定*/
+  animation: fluidrotate 30s ease 0s infinite; /*アニメーション設定*/
   position: absolute;
   z-index: -10; /* 要素を後ろへ */
 }
 
 /* 流動する丸１*/
-.fluid-1{
-  width: 50vh;/*横幅*/
-  height: 40vh;/*縦幅*/
+.fluid-1 {
+  width: 50vh; /*横幅*/
+  height: 40vh; /*縦幅*/
   top: 25vh;
   right: 15%;
 }
 
 /* 流動する丸２ */
-.fluid-2{
-  width: 25vh;/*横幅*/
-  height: 25vh;/*縦幅*/
+.fluid-2 {
+  width: 25vh; /*横幅*/
+  height: 25vh; /*縦幅*/
   top: 180vh;
   right: 40%;
 }
 
 /* 流動する丸３ */
-.fluid-3{
-  width: 25vh;/*横幅*/
-  height: 20vh;/*縦幅*/
+.fluid-3 {
+  width: 25vh; /*横幅*/
+  height: 20vh; /*縦幅*/
   top: 235vh;
-  right:  75%;
+  right: 75%;
 }
 
-.fluid-4{
-  width: 20vh;/*横幅*/
-  height: 20vh;/*縦幅*/
+.fluid-4 {
+  width: 20vh; /*横幅*/
+  height: 20vh; /*縦幅*/
   top: 290vh;
-  right:  55%;
+  right: 55%;
 }
 
-
-@keyframes fluidrotate { 
- 
-	  
-  0%, 100% {
-      border-radius: 63% 37% 54% 46%/55% 40% 52% 45%;
+@keyframes fluidrotate {
+  0%,
+  100% {
+    border-radius: 63% 37% 54% 46%/55% 40% 52% 45%;
   }
   14% {
-      border-radius: 40% 60% 54% 46%/49% 60% 40% 51%;
+    border-radius: 40% 60% 54% 46%/49% 60% 40% 51%;
   }
   28% {
-      border-radius: 40% 46% 38% 62%/49% 60% 30% 51%;
+    border-radius: 40% 46% 38% 62%/49% 60% 30% 51%;
   }
   42% {
-      border-radius: 61% 39% 50% 45%/61% 38% 62% 30%;
+    border-radius: 61% 39% 50% 45%/61% 38% 62% 30%;
   }
   56% {
-      border-radius: 61% 30% 67% 33%/70% 50% 50% 30%;
+    border-radius: 61% 30% 67% 33%/70% 50% 50% 30%;
   }
   70% {
-      border-radius: 50% 40% 34% 66%/46% 68% 30% 44%;
+    border-radius: 50% 40% 34% 66%/46% 68% 30% 44%;
   }
   84% {
-      border-radius: 46% 54% 50% 50%/35% 66% 39% 65%;
+    border-radius: 46% 54% 50% 50%/35% 66% 39% 65%;
   }
-	  
 }
 
 /* 筆記体文字 */
-.hand-writting p{
+.hand-writting p {
   /* font-family: 'Arizonia', cursive; 筆記体フォント1 */
-  font-family: 'WindSong', cursive; /* 筆記体フォント２ */
+  font-family: "WindSong", cursive; /* 筆記体フォント２ */
   margin-left: 65vw;
   margin-top: -10vh;
   font-size: 1.8rem;
@@ -81,65 +78,65 @@
 /* ご来店いただけるお客様すべてに"来てよかった",,, 
 &充実のサポートシステム&Belleの由来*/
 .top-title p,
-.contents .sub-title{
+.contents .sub-title {
   margin: 3vh auto;
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 
 /* ２つのコンテンツ */
-.content01, .content02{
+.content01,
+.content02 {
   padding: 0% 12%;
   display: flex;
 }
 
 .content01 li,
-.content02 li{
+.content02 li {
   width: 50%;
 }
 
 /* サポート体制 & Belleの由来 イメージ */
-.contents .image img{
+.contents .image img {
   width: 30vw;
   height: auto;
   object-fit: cover;
 }
 
 /* Belleの由来イメージ */
-.image02{
+.image02 {
   margin-left: 10vw;
 }
 
 /* ２つのコンテンツ テキスト */
-.contents .txt{
+.contents .txt {
   margin-top: 23vh;
 }
 
-.contents .txt p{
+.contents .txt p {
   text-align: center;
   margin-top: 6vh;
   line-height: 5vh;
 }
 
 /* Belleの由来 テキスト */
-.contents .txt02{
+.contents .txt02 {
   margin-top: 35vh;
 }
 
 /* お客様のご期待、ご要望に全力でお応えし、心身ともに美しくなるよう,,, */
-.add-txt{
+.add-txt {
   text-align: center;
-  font-size: .9rem;
+  font-size: 0.9rem;
   margin: 10vh auto 30vh;
 }
 
-
 /* 会社概要 */
-.company{
+.company {
   text-align: center;
 }
 
 /* 会社概要 ロゴ */
-.logo img{
+.logo img {
   width: 20vw;
   height: 20vh;
   object-fit: contain;
@@ -148,16 +145,22 @@
 }
 
 /* 会社概要リスト */
-.company dl{
-  width: 50%;
+.company-table {
+}
+.company dl {
+  width: 650px;
   display: flex; /* 横並びに */
   flex-wrap: wrap;
   margin: 2vh auto;
 }
 
+.company dl + dl {
+  text-align: left;
+}
+
 /* dl 左側 */
 .company dt {
-  width: 30%;
+  width: 25%;
   padding: 2%;
   background-color: #f3d147b2;
   margin: 0 0 10px 0;
@@ -170,59 +173,48 @@
 
 /* dd 右側 */
 .company dd {
-  width: 70%;
-  padding: 2%;
+  width: 75%;
+  padding: 20px 30px;
   background-color: #c0c0c01a;
   margin: 0 0 10px 0;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
 }
 
-/* dd 右側 */
-.retu-3 dd + dd{
-  width: 45%;
-  text-align: left;
+.company .dd-title {
+  display: inline-block;
+  width: 60px;
 }
 
-.retu-3 dd {
-  width: 25%;
-}
-
-.retu-3 .br-a{
-  padding-top: 15px;
-}
-
-
-@media screen and (max-width:599px){
-
+@media screen and (max-width: 768px) {
   /* 流動する丸１*/
-  .fluid-1{
-    width: 20vh;/*横幅*/
-    height: 20vh;/*縦幅*/
+  .fluid-1 {
+    width: 20vh; /*横幅*/
+    height: 20vh; /*縦幅*/
     top: 25vh;
     right: 0%;
   }
 
   /* 流動する丸２ 流動する丸３ 非表示*/
-  .fluid-2,.fluid-3{
+  .fluid-2,
+  .fluid-3 {
     display: none;
   }
-  
+
   /* 流動する丸４ */
-  .fluid-4{
-    width: 20vh;/*横幅*/
-    height: 20vh;/*縦幅*/
+  .fluid-4 {
+    width: 20vh; /*横幅*/
+    height: 20vh; /*縦幅*/
     top: 335vh;
   }
 
-
   /* 筆記体文字 */
-  .hand-writting p{
+  .hand-writting p {
     display: none;
   }
 
   /* ご来店いただけるお客様すべてに"来てよかった",,,  */
-  .top-title{
+  .top-title {
     width: 90%;
     margin-bottom: 10vh;
   }
@@ -230,65 +222,63 @@
   /* ご来店いただけるお客様すべてに"来てよかった",,, 
   &充実のサポートシステム&Belleの由来*/
   .top-title p,
-  .contents .sub-title{
+  .contents .sub-title {
     margin: 3vh auto;
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 
   /* ２つのコンテンツ */
-  .contents{
-    padding: 0% 10%;
-    flex-direction: column;/* 縦並びに */
+  .contents {
+    padding: 0% 20px;
+    flex-direction: column; /* 縦並びに */
   }
 
   /* Belleの由来 並びを逆に */
-  .content02{
+  .content02 {
     flex-direction: column-reverse;
   }
 
-  .contents li{
+  .contents li {
     width: 100%;
   }
 
   /* サポート体制 & Belleの由来 イメージ */
-  .contents .image img{
+  .contents .image img {
     width: 90vw;
   }
 
   /* Belleの由来イメージ */
-  .image02{
+  .image02 {
     margin-left: 0vw;
   }
 
   /* ２つのコンテンツ テキスト */
-  .contents .txt{
+  .contents .txt {
     margin-top: 5vh;
   }
 
-
-  .contents .txt p{
+  .contents .txt p {
     text-align: center;
     margin-top: 0vh;
   }
 
   /* Belleの由来 テキスト */
-  .contents .txt02{
+  .contents .txt02 {
     margin-top: 5vh;
   }
 
   /* お客様のご期待、ご要望に全力でお応えし、心身ともに美しくなるよう,,, */
-  .add-txt{
+  .add-txt {
     width: 90vw;
-    font-size: .85rem;
+    font-size: 0.85rem;
     margin: 10vh auto 20vh;
     line-height: 4vh;
   }
 
-
   /* 会社概要 */
 
   /* 会社概要 ロゴ */
-  .logo img{
+  .logo img {
     width: auto;
     height: 20vh;
     margin-top: -5vh;
@@ -296,23 +286,28 @@
 
   /* 会社概要リスト */
   .company dl {
-    width: 90vw;
+    flex-direction: column;
+    width: 90%;
     margin: 0vh auto;
   }
 
+  /* dl 左側 */
+  .company dt {
+    width: 100%;
+    margin-bottom: 0;
+  }
+
   /* dd 右側 */
-  .retu-3 dd + dd{
-  width: 50%;
-  text-align: left;
+  .company dd {
+    width: 100%;
   }
 
-  .retu-3 dd {
-    width: 20%;
+  .company dd > a {
+    margin-top: 10px;
   }
 
-  .retu-3 .br-a{
-    padding-top: 30px;
+  .sp-indent {
+    display: inline-block;
+    text-indent: 60px;
   }
-
-
 }

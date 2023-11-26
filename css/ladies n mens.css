@@ -39,7 +39,7 @@
   width: 30%;
   background-color: #fffbef;
   border: .2px solid #bbbbbb;
-  box-shadow: 0 0 5px #a0a0a0;
+  box-shadow: 2px 2px 5px rgba(159,159,159,.3019607843);;
   padding: 5% 4%;
   line-height: 5vh;
 }
